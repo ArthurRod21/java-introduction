@@ -63,6 +63,11 @@ public class Calculadora {
 				raiz();
 				break;
 			}
+			case 6: {
+				exponenciacao();
+				break;
+			}
+
 			default:
 				throw new IllegalArgumentException("Valor Inesperado:" + escolha);
 			}
@@ -131,4 +136,16 @@ public class Calculadora {
 		System.out.println(String.format("A raiz de %s é %s", A, resultado));
 	}
 
+	private static void exponenciacao() {
+		System.out.println("Operação de exponenciação");
+
+		System.out.println("Primeiro numero");
+		double A = scan.nextInt();
+		System.out.println("Elevado a:");
+		double B = scan.nextInt();
+		
+	    double resultado = Math.pow(A,B);
+	    System.out.println(String.format("%s ^ %s = %s", A, B, resultado ));
+	   
+	}
 }
