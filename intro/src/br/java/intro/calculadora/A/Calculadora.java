@@ -4,9 +4,8 @@ import java.util.Scanner;
 
 public class Calculadora {
 
-	// TODO Listar opera√ß√µes: soma, subtra√ß√£o, divis√£o e multiplica√ß√£o
-	private static String[] operacoes = { "Soma", "Subtra√ß√£o", "Divis√£o", "Multiplica√ß√£o", "Raiz Quadrada",
-			"Exponencia√ß√£o" };
+	private static String[] operacoes = { "Soma", "SubtraÁ„o", "Divis„o", "MultiplicaÁ„o", "Raiz Quadrada",
+			"ExponenciaÁo" };
 	private static Scanner scan = new Scanner(System.in);
 
 	public static void main(String[] args) {
@@ -17,7 +16,7 @@ public class Calculadora {
 	}
 
 	private static void listarOperacoes() {
-		System.out.println("Escolha a Opera√ß√£o desejada: ");
+		System.out.println("Escolha a OperaÁ„o desejada: ");
 
 		for (int i = 0; i < operacoes.length; i++) {
 			if (i % 2 != 0) {
@@ -28,21 +27,20 @@ public class Calculadora {
 		}
 	}
 
-	// TODO criar um loop que busque a operacao escolhida pelo usuario
-	// loops sao for, foreach e while
 	private static void escolhaUsuario() {
 
 		int escolha = 999;
 
 		while (escolha != 0) {
-			System.out.println("Insira o n√∫mero da opera√ß√£o: (ou digite para desligar a calculadora) ");
+			System.out.println("Insira o n˙mero da operaÁo: (ou digite para desligar a calculadora) ");
 			escolha = scan.nextInt();
 
-			// switch e o equivalente a um interruptor de varias posi√ß√µes
+			// switch È o equivalente a um interruptor de v·rias posiÁıes
 			switch (escolha) {
-			case 0:
+			case 0: {
 				escolha = 0;
 				break;
+			}
 			case 1: {
 				soma();
 				break;
@@ -76,11 +74,11 @@ public class Calculadora {
 	}
 
 	private static void soma() {
-		System.out.println("opera√ß√£o de Soma:");
+		System.out.println("OperaÁ„o de Soma:");
 
-		System.out.println("Primeiro numero:");
+		System.out.println("Primeiro n˙mero:");
 		int A = scan.nextInt();
-		System.out.println("Segundo numero:");
+		System.out.println("Segundo n˙mero:");
 		int B = scan.nextInt();
 
 		int resultado = A + B;
@@ -89,11 +87,11 @@ public class Calculadora {
 	}
 
 	private static void subtracao() {
-		System.out.println("opera√ß√£o de Subtra√ß√£o:");
+		System.out.println("operaÁo de SubtraÁ„o:");
 
-		System.out.println("Primeiro numero:");
+		System.out.println("Primeiro n˙mero:");
 		int A = scan.nextInt();
-		System.out.println("Segundo numero:");
+		System.out.println("Segundo n˙mero:");
 		int B = scan.nextInt();
 
 		int resultado = A - B;
@@ -102,24 +100,23 @@ public class Calculadora {
 	}
 
 	private static void divisao() {
-		System.out.println("Opera√ß√£o de Divis√£o");
+		System.out.println("OperaÁ„o de Divis„o");
 
-		System.out.println("Primeiro numero:");
+		System.out.println("Primeiro n˙mero:");
 		int A = scan.nextInt();
-		System.out.println("Segundo numero:");
+		System.out.println("Segundo n˙mero:");
 		int B = scan.nextInt();
 
 		int resultado = A / B;
 		System.out.println(String.format("%s / %s = %s", A, B, resultado));
-
 	}
 
 	private static void multiplicacao() {
-		System.out.println("Opera√ß√£o de Divis√£o");
+		System.out.println("OperaÁ„o de Divis√£o");
 
-		System.out.println("Primeiro numero:");
+		System.out.println("Primeiro n˙mero:");
 		int A = scan.nextInt();
-		System.out.println("Segundo numero:");
+		System.out.println("Segundo n˙mero:");
 		int B = scan.nextInt();
 
 		int resultado = A * B;
@@ -127,25 +124,24 @@ public class Calculadora {
 	}
 
 	private static void raiz() {
-		System.out.println("Opera√ß√£o de Raiz quadrada");
+		System.out.println("OperaÁ„o de Raiz quadrada");
 
-		System.out.println("Insira numero");
+		System.out.println("Insira n˙mero:");
 		double A = scan.nextInt();
 
 		double resultado = Math.sqrt(A);
-		System.out.println(String.format("A raiz de %s √© %s", A, resultado));
+		System.out.println(String.format("A raiz de %s È %s", A, resultado));
 	}
 
 	private static void exponenciacao() {
-		System.out.println("Opera√ß√£o de exponencia√ß√£o");
+		System.out.println("OperaÁ„o de exponenciaÁ„o");
 
-		System.out.println("Primeiro numero");
+		System.out.println("Primeiro n˙mero:");
 		double A = scan.nextInt();
-		System.out.println("Elevado a:");
+		System.out.println("Expoente:");
 		double B = scan.nextInt();
-		
-	    double resultado = Math.pow(A,B);
-	    System.out.println(String.format("%s ^ %s = %s", A, B, resultado ));
-	   
+
+		double resultado = Math.pow(A, B);		
+		System.out.println(String.format("%s ^ %s = %s", A, B, resultado));
 	}
 }
